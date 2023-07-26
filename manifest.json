@@ -1,0 +1,22 @@
+{
+    "name": "paziresh24-toolbar",
+    "description": "Improve paziresh24 admin panel",
+    "version": "1.0",
+    "manifest_version": 3,
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.paziresh24.com/*",
+                "https://www.sepehrsalamat.ir/*",
+                "https://www.paziresh24.dev/*"
+            ],
+            "js": ["dist/inject.js"]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "matches": ["<all_urls>"],
+            "resources": ["dist/content.js"]
+        }
+    ]
+}
